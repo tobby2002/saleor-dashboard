@@ -62,7 +62,13 @@ const LoginCard = withStyles(styles, { name: "LoginCard" })(
     const intl = useIntl();
 
     return (
-      <Form initial={{ email: "", password: "" }} onSubmit={onSubmit}>
+      <Form
+        initial={{
+          email: "admin@example.com",
+          password: "admin"
+        }}
+        onSubmit={onSubmit}
+      >
         {({ change: handleChange, data, submit: handleSubmit }) => (
           <>
             {error && (
